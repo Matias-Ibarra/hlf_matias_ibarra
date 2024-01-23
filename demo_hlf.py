@@ -1,14 +1,15 @@
+from variables import lista_barcos
+from funciones import disparar
+from clases import Tablero
+import numpy as np
+import os
+import time 
+
 def jugar():
     '''
     La función importa las demás funciones creadas para el juego.
     Crea un sistema de turnos y cuando uno de los jugadores acierta a todos los barcos gana.
     '''
-    from variables import lista_barcos
-    from disparar import disparar
-    from clases import Tablero
-    import numpy as np
-    import os
-    import time 
 
     print("\nBienvenido al demo de hundir la flota!\n")
     input("Presiona cualquier tecla para continuar\n")
@@ -110,4 +111,5 @@ def jugar():
             print("Has ganado,", nombre_jugador, "!")
             print("-----------------------")
 
-jugar()
+if __name__ == "__main__":
+    jugar()

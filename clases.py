@@ -1,3 +1,8 @@
+from variables import dim
+import pandas as pd
+import numpy as np
+import random
+
 class Tablero:
     
     def __init__(self, id_jugador:str, barcos=0):
@@ -13,8 +18,7 @@ class Tablero:
         '''
         Crea un tablero de dimensión 10x10
         '''
-        from variables import dim
-        import numpy as np
+       
         self.tablero = np.full(dim, " ", dtype=str)
         return self.tablero
 
@@ -26,7 +30,7 @@ class Tablero:
         con el próximo sentido. Si no es posible ubicar el barco en ninguno de los 4 sentidos, escoge otra casilla inicial
         aleatoria y lo vuelve a intentar, así hasta conseguir ubicar el barco.
         '''
-        import random
+        
         # Ubicación inicial aleatoria
         i = random.randint(0,9)
         j = random.randint(0,9)

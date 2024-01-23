@@ -1,3 +1,11 @@
+import numpy as np
+import random
+import os
+import time
+from variables import lista_barcos
+# from funciones import disparar
+from clases import Tablero
+
 def disparar(jugador, tablero, tablero_disparos, fila=0, columna=0):
     '''
     La función disparar pide al jugador coordenadas del tablero, si coincide con un barco del oponente, se imprime una letra X en el tablero de este último.
@@ -11,10 +19,6 @@ def disparar(jugador, tablero, tablero_disparos, fila=0, columna=0):
     columna: un input efectuado por el usuario en su turno, un valor aleatorio entre 0 y 9 para el ordenador.
     '''
 
-    import numpy as np
-    import random
-    import os
-    import time
     # Si el turno es del ordenador el disparo será aleatorio
     if jugador == "ordenador":
         fila = random.randint(0,9)
@@ -73,13 +77,7 @@ def jugar():
     '''
     La función importa las demás funciones creadas para el juego.
     Crea un sistema de turnos y cuando uno de los jugadores acierta a todos los barcos gana.
-    '''
-    from variables import lista_barcos
-    from disparar import disparar
-    from clases import Tablero
-    import numpy as np
-    import os
-    import time 
+    ''' 
 
     print("\nBienvenido al demo de hundir la flota!\n")
     input("Presiona cualquier tecla para continuar\n")
